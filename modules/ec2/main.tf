@@ -56,7 +56,7 @@ resource aws_instance my_instance {
     }   
 
     tags = {
-      name = "${var.my_env}-${var.instance_name}"
+      name = "${var.my_env}-${var.instance_name}-${count.index + 1}"
       Environment = var.my_env
       
     }
